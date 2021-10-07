@@ -1,19 +1,39 @@
 int Y_AXIS = 1;
 int X_AXIS = 2;
 color b1, b2, c1, c2;
-
+int p = (int) (Math.random()*4);
 Die jeff;
   int TOTAL = 0;
+
   void setup()
   {
+    
+  System.out.println (p);
+  
+  if (p == 1){
+    c1 = color (204, 0, 51);
+    c2 = color (51, 156, 204);
+  }
+  if (p == 0){
+    c1 = color (232, 179, 110);
+    c2 = color (101, 65, 175);
+  }
+  if (p == 2){
+    c1 = color (245, 128, 37);
+    c2 = color (245, 224, 80);
+  }
+  if (p == 3){
+    c1 = color (232, 6, 203);
+    c2 = color (67, 28, 83);
+  }
       size (800, 800);
       noLoop();
   }
   void draw(){
       
   //background(0,0,0);
-  c1 = color (204, 0, 51);
-  c2 = color (51, 156, 204);
+  //c1 = color (204, 0, 51);
+  //c2 = color (51, 156, 204);
   setGradient(0, 0, 800, 800, c1, c2, Y_AXIS);
   setGradient(0, 0, 800, 800, c2, c1, X_AXIS);
   noStroke();
@@ -28,8 +48,8 @@ Die jeff;
   }
   textSize(40);
   fill(255);
-  text ("Total: ", 300, 780);
-  text (TOTAL, 420, 780);
+  text ("Total: ", 300, 760);
+  text (TOTAL, 420, 760);
   }
   
   void mousePressed()
@@ -131,7 +151,7 @@ Die jeff;
           
       }
   }
-  void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) {
+  void setGradient(int x, int y, float w, float h, color c1, color c2, int axis) {
 
   noFill();
 
@@ -144,3 +164,4 @@ Die jeff;
     }
   }
   }
+ 
