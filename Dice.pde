@@ -28,8 +28,8 @@ Die jeff;
   }
   textSize(40);
   fill(255);
-  text ("Total: ", 300, 760);
-  text (TOTAL, 420, 760);
+  text ("Total: ", 300, 780);
+  text (TOTAL, 420, 780);
   }
   
   void mousePressed()
