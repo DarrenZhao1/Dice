@@ -18,10 +18,9 @@
     }
   }
   textSize(40);
-        fill(255);
-         text ("Total: ", 300, 760);
-        
-         text (TOTAL, 470, 760);
+  fill(255);
+  text ("Total: ", 300, 760);
+  text (TOTAL, 470, 760);
   }
   
   void mousePressed()
@@ -66,61 +65,59 @@
       void roll()
       {
           dValue = (int)((Math.random()*6) +1);
-          System.out.println(dValue);
           TOTAL = TOTAL + dValue;
       }
       void show()
       {   if (dValue == 6){
-          fill(255, 255, 255);
-          rect(dX, dY, 100, 100);
-          fill(0, 0, 0);
-          ellipse(c4x, c4y, 20, 20);
-          ellipse(c2x, c2y, 20, 20);
-          ellipse(c5x, c5y, 20, 20);
-          ellipse(c6x, c6y, 20, 20);
-          ellipse(c3x, c3y, 20, 20);
-          ellipse(c7x, c7y, 20, 20);
+            fill(255, 255, 255);
+            rect(dX, dY, 100, 100);
+            fill(0, 0, 0);
+            ellipse(c4x, c4y, 20, 20);
+            ellipse(c2x, c2y, 20, 20);
+            ellipse(c5x, c5y, 20, 20);
+            ellipse(c6x, c6y, 20, 20);
+            ellipse(c3x, c3y, 20, 20);
+            ellipse(c7x, c7y, 20, 20);
           }
           if (dValue == 5){
-          fill(255, 255, 255);
-          rect(dX, dY, 100, 100);
-          fill(0, 0, 0);
-          ellipse(c4x, c4y, 20, 20);
-          ellipse(c3x, c4y, 20, 20);
-          ellipse(c1x, c1y, 20, 20);
-          ellipse(c5x, c5y, 20, 20);
-          ellipse(c7x, c7y, 20, 20);
+            fill(255, 255, 255);
+            rect(dX, dY, 100, 100);
+            fill(0, 0, 0);
+            ellipse(c4x, c4y, 20, 20);
+            ellipse(c3x, c4y, 20, 20);
+            ellipse(c1x, c1y, 20, 20);
+            ellipse(c5x, c5y, 20, 20);
+            ellipse(c7x, c7y, 20, 20);
           }
           if (dValue == 4){
-          fill(255, 255, 255);
-          rect(dX, dY, 100, 100);
-          fill(0, 0, 0);
-          ellipse(c4x, c4y, 20, 20);
-          ellipse(c5x, c5y, 20, 20);
-          ellipse(c6x, c6y, 20, 20);
-          ellipse(c7x, c7y, 20, 20);
+            fill(255, 255, 255);
+            rect(dX, dY, 100, 100);
+            fill(0, 0, 0);
+            ellipse(c4x, c4y, 20, 20);
+            ellipse(c5x, c5y, 20, 20);
+            ellipse(c6x, c6y, 20, 20);
+            ellipse(c7x, c7y, 20, 20);
           }
           if (dValue == 3){ 
-          fill(255, 255, 255);
-          rect(dX, dY, 100, 100);
-          fill(0, 0, 0);
-          ellipse(c2x, c2y, 20, 20);
-          ellipse(c1x, c1y, 20, 20);
-          ellipse(c3x, c3y, 20, 20);
+            fill(255, 255, 255);
+            rect(dX, dY, 100, 100);
+            fill(0, 0, 0);
+            ellipse(c2x, c2y, 20, 20);
+            ellipse(c1x, c1y, 20, 20);
+            ellipse(c3x, c3y, 20, 20);
           }
           if (dValue == 2){
-          fill(255, 255, 255);
-          rect(dX, dY, 100, 100);
-          fill(0, 0, 0);
-          ellipse(c2x, c2y, 20, 20);
-          ellipse(c3x, c3y, 20, 20);
+            fill(255, 255, 255);
+            rect(dX, dY, 100, 100);
+            fill(0, 0, 0);
+            ellipse(c2x, c2y, 20, 20);
+            ellipse(c3x, c3y, 20, 20);
           }
           if (dValue == 1){
-          fill(255, 255, 255);
-          rect(dX, dY, 100, 100);
-          fill(0, 0, 0);
-          ellipse(c1x, c1y, 20, 20);
+            fill(255, 255, 255);
+            rect(dX, dY, 100, 100);
+            fill(0, 0, 0);
+            ellipse(c1x, c1y, 20, 20);
           }
-          
       }
   }
