@@ -1,4 +1,8 @@
-  Die jeff;
+int Y_AXIS = 1;
+int X_AXIS = 2;
+color b1, b2, c1, c2;
+
+Die jeff;
   int TOTAL = 0;
   void setup()
   {
@@ -7,7 +11,12 @@
   }
   void draw(){
       
-  background(0,0,0);
+  //background(0,0,0);
+  c1 = color (204, 0, 51);
+  c2 = color (51, 156, 204);
+  setGradient(0, 0, 800, 800, c1, c2, Y_AXIS);
+  setGradient(0, 0, 800, 800, c2, c1, X_AXIS);
+  noStroke();
   for(int f = 0; f < 700; f+=120)
   {
     for(int e = 0; e < 700; e+=120)
@@ -69,55 +78,69 @@
       }
       void show()
       {   if (dValue == 6){
-            fill(255, 255, 255);
-            rect(dX, dY, 100, 100);
-            fill(0, 0, 0);
-            ellipse(c4x, c4y, 20, 20);
-            ellipse(c2x, c2y, 20, 20);
-            ellipse(c5x, c5y, 20, 20);
-            ellipse(c6x, c6y, 20, 20);
-            ellipse(c3x, c3y, 20, 20);
-            ellipse(c7x, c7y, 20, 20);
+          fill(255, 255, 255);
+          rect(dX, dY, 100, 100);
+          fill(0, 0, 0);
+          ellipse(c4x, c4y, 20, 20);
+          ellipse(c2x, c2y, 20, 20);
+          ellipse(c5x, c5y, 20, 20);
+          ellipse(c6x, c6y, 20, 20);
+          ellipse(c3x, c3y, 20, 20);
+          ellipse(c7x, c7y, 20, 20);
           }
           if (dValue == 5){
-            fill(255, 255, 255);
-            rect(dX, dY, 100, 100);
-            fill(0, 0, 0);
-            ellipse(c4x, c4y, 20, 20);
-            ellipse(c3x, c4y, 20, 20);
-            ellipse(c1x, c1y, 20, 20);
-            ellipse(c5x, c5y, 20, 20);
-            ellipse(c7x, c7y, 20, 20);
+          fill(255, 255, 255);
+          rect(dX, dY, 100, 100);
+          fill(0, 0, 0);
+          ellipse(c4x, c4y, 20, 20);
+          ellipse(c3x, c4y, 20, 20);
+          ellipse(c1x, c1y, 20, 20);
+          ellipse(c5x, c5y, 20, 20);
+          ellipse(c7x, c7y, 20, 20);
           }
           if (dValue == 4){
-            fill(255, 255, 255);
-            rect(dX, dY, 100, 100);
-            fill(0, 0, 0);
-            ellipse(c4x, c4y, 20, 20);
-            ellipse(c5x, c5y, 20, 20);
-            ellipse(c6x, c6y, 20, 20);
-            ellipse(c7x, c7y, 20, 20);
+          fill(255, 255, 255);
+          rect(dX, dY, 100, 100);
+          fill(0, 0, 0);
+          ellipse(c4x, c4y, 20, 20);
+          ellipse(c5x, c5y, 20, 20);
+          ellipse(c6x, c6y, 20, 20);
+          ellipse(c7x, c7y, 20, 20);
           }
           if (dValue == 3){ 
-            fill(255, 255, 255);
-            rect(dX, dY, 100, 100);
-            fill(0, 0, 0);
-            ellipse(c2x, c2y, 20, 20);
-            ellipse(c1x, c1y, 20, 20);
-            ellipse(c3x, c3y, 20, 20);
+          fill(255, 255, 255);
+          rect(dX, dY, 100, 100);
+          fill(0, 0, 0);
+          ellipse(c2x, c2y, 20, 20);
+          ellipse(c1x, c1y, 20, 20);
+          ellipse(c3x, c3y, 20, 20);
           }
           if (dValue == 2){
-            fill(255, 255, 255);
-            rect(dX, dY, 100, 100);
-            fill(0, 0, 0);
-            ellipse(c2x, c2y, 20, 20);
-            ellipse(c3x, c3y, 20, 20);
+          fill(255, 255, 255);
+          rect(dX, dY, 100, 100);
+          fill(0, 0, 0);
+          ellipse(c2x, c2y, 20, 20);
+          ellipse(c3x, c3y, 20, 20);
           }
           if (dValue == 1){
-            fill(255, 255, 255);
-            rect(dX, dY, 100, 100);
-            fill(0, 0, 0);
-            ellipse(c1x, c1y, 20, 20);
+          fill(255, 255, 255);
+          rect(dX, dY, 100, 100);
+          fill(0, 0, 0);
+          ellipse(c1x, c1y, 20, 20);
           }
+          
       }
   }
+  void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) {
+
+  noFill();
+
+  if (axis == Y_AXIS) {  // Top to bottom gradient
+   for (int i = y; i <= y+h; i++) {
+      float inter = map(i, y, y+h, 0, 1);
+      color c = lerpColor(c1, c2, inter);
+      stroke(c);
+      line(x, i, x+w, i);
+    }
+  }
+ }
