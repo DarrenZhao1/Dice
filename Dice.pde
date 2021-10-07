@@ -29,7 +29,7 @@ Die jeff;
   textSize(40);
   fill(255);
   text ("Total: ", 300, 760);
-  text (TOTAL, 470, 760);
+  text (TOTAL, 420, 760);
   }
   
   void mousePressed()
@@ -143,4 +143,5 @@ Die jeff;
       line(x, i, x+w, i);
     }
   }
- }
+  }
+ 
